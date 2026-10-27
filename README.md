@@ -35,11 +35,14 @@ Or install directly from GitHub (requires Git):
 python -m pip install "git+https://github.com/DivoomDevelop/divoom-wifi-python.git"
 ```
 
-For a downloaded wheel: `python -m pip install divoom_wifi-0.1.1-py3-none-any.whl`.
+For a downloaded wheel: `python -m pip install divoom_wifi-0.1.2-py3-none-any.whl`.
 The only runtime dependency is `requests`. Windows, macOS and Linux use the same Python API.
 No documentation website access is needed at runtime.
 
 ## Discover, select, call
+
+Hardware **90, 92 and 400** requires a LAN token. Set `DIVOOM_LOCAL_TOKEN` before running the example,
+or pass `local_token=...` to `connect()`. Other supported hardware does not require a token.
 
 ```python
 from divoom_wifi import connect, discover_devices
@@ -79,10 +82,10 @@ with connect("192.168.1.60", hardware=400, local_token=123456) as gate:
     gate.select_clock(clock_id=100, lcd_index=0, lcd_independence=0)
 ```
 
-The shown IPs, token and IDs are placeholders. TimeGate hardware **400** requires a `LocalToken` from
-device settings; hardware **402** accepts LAN requests without one. Alternatively set `DIVOOM_LOCAL_TOKEN`
-when needed. Tokens are kept in memory, injected only into documented
-TimeGate operations, and are not saved. Cloud APIs automatically use the discovered device ID/MAC.
+The shown IPs, token and IDs are placeholders. Only hardware **90, 92 and 400** requires a token for LAN
+commands. Use `local_token=...` or `DIVOOM_LOCAL_TOKEN`: the SDK sends `DeviceToken` for PIXOO64 90/92
+and `LocalToken` for TimeGate 400. Tokens stay in memory. Other hardware and all cloud/discovery requests
+neither require nor receive the configured token. Cloud APIs automatically use the discovered device ID/MAC.
 For a direct-IP cloud call, construct a `DeviceInfo` with that metadata, or supply `device_id` /
 `device_mac` to the corresponding method.
 
@@ -107,9 +110,9 @@ require an explicit hardware ID.
 
 ## Command line
 
-Run `divoom-wifi` with no arguments for the device/API selection menu. TimeGate hardware 400 tokens
-are requested with hidden input when a terminal is available. Hardware 402 does not prompt for an
-optional token. Noninteractive calls that need a token use `DIVOOM_LOCAL_TOKEN`.
+Run `divoom-wifi` with no arguments for the device/API selection menu. Hardware 90/92/400 LAN commands
+request a token with hidden input when needed. Other hardware does not prompt for one.
+Noninteractive calls that need a token use `DIVOOM_LOCAL_TOKEN`.
 
 ```console
 divoom-wifi discover

@@ -13,10 +13,12 @@ class ProductProfile:
     path: str
     method: str
     local_token_required: bool = False
+    token_field: str = "LocalToken"
 
 
 PROFILES = {
-    hw: ProductProfile(product, hw, port, path, method, local_token_required=(hw == 400))
+    hw: ProductProfile(product, hw, port, path, method, local_token_required=(hw in (90, 92, 400)),
+                       token_field="DeviceToken" if hw in (90, 92) else "LocalToken")
     for product, hardware, port, path, method in (
         ("pixoo64", (90, 92), 80, "/post", "POST"),
         ("pixoo64", (96,), 9000, "/divoom_api", "POST"),

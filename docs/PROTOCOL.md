@@ -16,11 +16,13 @@ page's documented URL; notably TIMEFRAME's dial list is a cloud GET body. LAN en
 are disabled to keep local tokens on the direct connection. Cloud requests can use normal proxy
 settings. Redirects are rejected and requests are not retried automatically.
 
-TimeGate token requirements depend on hardware: 400 requires LocalToken, while 402 accepts LAN
-requests without it (live reads verified on 2026-10-27). A supplied token is still attached to documented
-TimeGate operations on either profile. The registry's token flag records the source-document field;
-`ProductProfile.local_token_required` determines whether the SDK requires it for the selected hardware.
-The CLI follows that hardware profile. See [direct LAN checks](LAN_CHECKS.md) for acknowledgement-only
+As confirmed by the firmware maintainer, only hardware **90, 92 and 400** requires a LAN token.
+The `local_token` argument / `DIVOOM_LOCAL_TOKEN` supplies the value. PIXOO64 90/92 uses `DeviceToken`
+from the common command format (page 24); TimeGate 400 uses its documented `LocalToken` field.
+Other hardware, cloud APIs and discovery do not receive the token, even when one is configured.
+The registry's token flag retains source-document metadata; `ProductProfile.local_token_required`
+and `token_field` determine actual LAN validation and injection. The CLI follows the same hardware rule.
+See [direct LAN checks](LAN_CHECKS.md) for acknowledgement-only
 legacy query responses on hardware 402; a zero status does not prove configuration data was returned.
 
 Source differences are intentionally recorded:

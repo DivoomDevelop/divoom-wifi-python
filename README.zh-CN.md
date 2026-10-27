@@ -32,9 +32,10 @@ divoom-wifi
 python -m pip install "git+https://github.com/DivoomDevelop/divoom-wifi-python.git"
 ```
 
-无参数启动后，选择设备，再选择对应 API、查看参数并执行。TimeGate 硬件 **400** 需要设备设置中的
-`LocalToken`，命令行会隐藏输入；硬件 **402** 无需填写。需要时也可设置环境变量
-`DIVOOM_LOCAL_TOKEN`，不会自动保存。
+无参数启动后，选择设备，再选择对应 API、查看参数并执行。**只有硬件 90、92、400 的局域网请求需要 Token**，
+命令行会隐藏输入，也可通过 `connect(..., local_token=...)` 或环境变量 `DIVOOM_LOCAL_TOKEN` 提供。
+90/92 按通用命令格式发送 `DeviceToken`，400 按产品协议发送 `LocalToken`，不会自动保存。
+其他硬件及云端、发现请求均不要求或携带该 Token。运行下面的示例前，请先为需要 Token 的设备配置该环境变量。
 
 ```python
 from divoom_wifi import discover_devices, connect

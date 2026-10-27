@@ -43,4 +43,4 @@ class ValidationError(DivoomError, ValueError):
 
 
 class TokenRequiredError(ValidationError):
-    """Provide the TimeGate LocalToken displayed in device settings."""
+    """Provide the LAN token required by hardware 90, 92 or 400."""

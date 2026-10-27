@@ -85,7 +85,10 @@ def test_every_registered_operation_over_real_http(spec, mode, make_client, serv
             expected = (getattr(client.device, p.auto) if p.auto
                         else params.get(p.name if mode == "named" else p.wire))
             assert body[p.wire] == expected
-        assert ("LocalToken" in body) == spec.token_required
+        token_expected = spec.route == "lan" and client.profile.local_token_required
+        assert ("LocalToken" in body or "DeviceToken" in body) == token_expected
+        if token_expected:
+            assert body[client.profile.token_field] == 123456
         assert result["business"] == {"unchanged": True} if spec.name not in ("get_hardware_version", "get_lan_capabilities") else result["Hardware"] == 530
     if spec.route == "download":
         assert Path(result).read_bytes() == b"\x00media-bytes\xff"
@@ -176,12 +179,47 @@ def test_tokens_are_injected_only_where_documented(make_client, server, monkeypa
         gate.set_brightness(brightness=40)
     assert not server.records
     monkeypatch.setenv("DIVOOM_LOCAL_TOKEN", "654321")
-    gate = make_client(402, local_token=None)
+    gate = make_client(400, local_token=None)
     gate.set_brightness(brightness=40)
     assert server.records[-1]["payload"]["LocalToken"] == 654321
     gate.get_uploaded_images()
     assert server.records[-1]["payload"] == {"DeviceId": 300000001, "DeviceMac": "aabbccddeeff", "Page": 1}
     assert "654321" not in str(gate.describe_api("set_brightness").as_dict())
+
+
+@pytest.mark.parametrize("hardware,field", [(90, "DeviceToken"), (92, "DeviceToken"), (400, "LocalToken")])
+def test_legacy_lan_requires_token_but_cloud_does_not(hardware, field, make_client, server, monkeypatch):
+    monkeypatch.delenv("DIVOOM_LOCAL_TOKEN", raising=False)
+    client = make_client(hardware, local_token=None)
+    with pytest.raises(TokenRequiredError):
+        client.get_settings()
+    assert not server.records
+    client.get_uploaded_images()
+    assert not {"DeviceToken", "LocalToken"}.intersection(server.records[-1]["payload"])
+    client.set_local_token(654321)
+    client.get_settings()
+    assert server.records[-1]["payload"] == {"Command": "Channel/GetAllConf", field: 654321}
+
+
+@pytest.mark.parametrize("hardware", [96, 402, 510, 511, 512, 530])
+@pytest.mark.parametrize("token", [None, 654321])
+def test_other_hardware_does_not_require_or_send_tokens(hardware, token, make_client, server, monkeypatch):
+    monkeypatch.delenv("DIVOOM_LOCAL_TOKEN", raising=False)
+    client = make_client(hardware, local_token=token)
+    client.set_brightness(brightness=40)
+    assert server.records[-1]["payload"] == {"Command": "Channel/SetBrightness", "Brightness": 40}
+
+
+@pytest.mark.parametrize("hardware", [400, 402])
+def test_partial_rgb_settings_do_not_depend_on_token_field_count(hardware, make_client, server):
+    client = make_client(hardware)
+    with pytest.raises(ValidationError, match="at least one RGB"):
+        client.set_rgb()
+    client.set_rgb(on_off=0)
+    expected = {"Command": "Channel/SetRGBInfo", "OnOff": 0}
+    if hardware == 400:
+        expected["LocalToken"] = 123456
+    assert server.records[-1]["payload"] == expected
 
 
 def test_conditional_clock_target_and_channel_type(make_client, server):

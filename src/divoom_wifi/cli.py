@@ -128,9 +128,9 @@ def _describe(spec: APISpec, as_json: bool = False) -> None:
     print(f"Transport: {spec.method} {spec.url or spec.path or 'product LAN endpoint'}")
     if spec.command:
         print(f"Command: {spec.command}")
-    if spec.token_required:
-        print("TimeGate hardware 400 requires LocalToken; hardware 402 accepts requests without it. "
-              "Use DIVOOM_LOCAL_TOKEN or hidden input when required.")
+    if spec.route == "lan" and spec.product in ("pixoo64", "timegate"):
+        print("Only hardware 90/92/400 requires a LAN token: DeviceToken for 90/92, LocalToken for 400. "
+              "Use DIVOOM_LOCAL_TOKEN or hidden input; other hardware does not require or send a token.")
     for p in spec.parameters:
         state = "required" if p.required and p.default is None and not p.auto else "optional/automatic"
         print(f"  {p.name} ({p.wire}, {p.type}, {state}): {p.description}")
@@ -155,10 +155,10 @@ def _params(text: str) -> dict[str, Any]:
 
 
 def _token(client: BaseDevice, spec: APISpec) -> None:
-    if spec.token_required and client.profile.local_token_required and client._token is None:
+    if spec.route == "lan" and client.profile.local_token_required and client._token is None:
         if not sys.stdin.isatty():
-            raise TokenRequiredError("Set DIVOOM_LOCAL_TOKEN for noninteractive TimeGate commands")
-        client.set_local_token(getpass.getpass("LocalToken from device settings (hidden): "))
+            raise TokenRequiredError("Set DIVOOM_LOCAL_TOKEN for noninteractive hardware 90/92/400 LAN commands")
+        client.set_local_token(getpass.getpass("Device token from settings (hidden): "))
 
 
 def _interactive(args: argparse.Namespace) -> int:

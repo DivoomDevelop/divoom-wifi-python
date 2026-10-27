@@ -89,17 +89,18 @@ def test_cli_offline_catalog_and_description(capsys):
 def test_cli_json_call_files_and_wire_params(server, tmp_path, capsys):
     path = tmp_path / "parameters.json"
     path.write_text('{"Brightness": 41}', encoding="utf-8")
-    result = cli.main(["call", "set_brightness", "--ip", "127.0.0.1", "--hardware", "90",
+    result = cli.main(["call", "set_brightness", "--ip", "127.0.0.1", "--hardware", "96",
                        "--base-url", server.url, "--params", "@" + str(path), "--json"])
     assert result == 0
     assert json.loads(capsys.readouterr().out)["ReturnCode"] == 0
     assert server.records[-1]["payload"] == {"Command": "Channel/SetBrightness", "Brightness": 41}
 
 
-def test_cli_noninteractive_token_error_does_not_leak(server, monkeypatch, capsys):
+@pytest.mark.parametrize("hardware", [90, 92, 400])
+def test_cli_noninteractive_token_error_does_not_leak(hardware, server, monkeypatch, capsys):
     monkeypatch.delenv("DIVOOM_LOCAL_TOKEN", raising=False)
     monkeypatch.setattr(sys.stdin, "isatty", lambda: False)
-    assert cli.main(["call", "get_settings", "--ip", "127.0.0.1", "--hardware", "400",
+    assert cli.main(["call", "get_settings", "--ip", "127.0.0.1", "--hardware", str(hardware),
                      "--base-url", server.url, "--json"]) == 2
     captured = capsys.readouterr()
     assert captured.out == ""
@@ -147,7 +148,7 @@ def test_full_interactive_selection_then_call_and_quit(server, monkeypatch, caps
 
 def test_cli_stdin_and_invalid_json(server, monkeypatch, capsys):
     monkeypatch.setattr(sys, "stdin", io.StringIO('{"brightness":50}'))
-    target = ["--ip", "127.0.0.1", "--hardware", "90", "--base-url", server.url]
+    target = ["--ip", "127.0.0.1", "--hardware", "96", "--base-url", server.url]
     assert cli.main(["call", "set_brightness", *target, "--params", "-"]) == 0
     assert server.records[-1]["payload"]["Brightness"] == 50
     capsys.readouterr()
@@ -160,3 +161,13 @@ def test_cli_no_terminal_never_hangs(monkeypatch, capsys):
     monkeypatch.setattr(sys.stdin, "isatty", lambda: False)
     assert cli.main([]) == 2
     assert "terminal" in capsys.readouterr().err
+
+
+@pytest.mark.parametrize("hardware", [90, 92])
+def test_cli_pixoo_legacy_reads_use_device_token(hardware, server, monkeypatch, capsys):
+    monkeypatch.setenv("DIVOOM_LOCAL_TOKEN", "654321")
+    monkeypatch.setattr(sys.stdin, "isatty", lambda: False)
+    assert cli.main(["call", "get_settings", "--ip", "127.0.0.1", "--hardware", str(hardware),
+                     "--base-url", server.url, "--json"]) == 0
+    assert json.loads(capsys.readouterr().out)["ReturnCode"] == 0
+    assert server.records[-1]["payload"] == {"Command": "Channel/GetAllConf", "DeviceToken": 654321}

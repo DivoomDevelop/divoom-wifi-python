@@ -16,7 +16,7 @@ from .models import PROFILES, DeviceInfo, ProductProfile
 from .products import AstroToo, Pixoo64, TimeFrame, TimeGate
 from .registry import APISpec, Parameter
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __all__ = [
     "PROFILES",
     "APISpec",

@@ -53,15 +53,15 @@ class BaseDevice:
         return describe_api(self.product, name)
 
     def set_local_token(self, token: int | str) -> None:
-        """Set a TimeGate token in memory only; useful after a hidden CLI prompt."""
+        """Set a hardware 90/92/400 LAN token in memory only."""
         if type(token) is int:
             value = token
         elif isinstance(token, str) and token.isascii() and token.isdigit():
             value = int(token)
         else:
-            raise ValidationError("LocalToken must be a nonnegative integer")
+            raise ValidationError("Token must be a nonnegative integer")
         if value < 0:
-            raise ValidationError("LocalToken must be a nonnegative integer")
+            raise ValidationError("Token must be a nonnegative integer")
         self._token = value
 
     def _bind(self, spec: APISpec, supplied: dict[str, Any]) -> dict[str, Any]:
@@ -98,13 +98,12 @@ class BaseDevice:
             payload[param.wire] = value
         if remaining:
             raise ValidationError(f"Unknown parameters: {', '.join(sorted(remaining))}", api_name=spec.name)
-        if spec.token_required:
-            if self._token is None and self.profile.local_token_required:
-                raise TokenRequiredError("TimeGate hardware 400 requires LocalToken from device settings; "
+        if spec.route == "lan" and self.profile.local_token_required:
+            if self._token is None:
+                raise TokenRequiredError(f"Hardware {self.profile.hardware} requires {self.profile.token_field}; "
                                          "set DIVOOM_LOCAL_TOKEN or pass local_token to connect()", api_name=spec.name)
-            if self._token is not None:
-                self.set_local_token(self._token)
-                payload["LocalToken"] = self._token
+            self.set_local_token(self._token)
+            payload[self.profile.token_field] = self._token
         self._validate_payload(spec, payload)
         return payload
 
@@ -163,7 +162,7 @@ class BaseDevice:
         if "LcdArray" in payload and (len(payload["LcdArray"]) != 5
                                       or any(type(v) is not int or v not in (0, 1) for v in payload["LcdArray"])):
             raise ValidationError("LcdArray must contain five numeric 0/1 values", api_name=spec.name)
-        if spec.name == "set_rgb" and len(payload) <= 2:  # Command and LocalToken alone do nothing.
+        if spec.name == "set_rgb" and not any(p.wire in payload for p in spec.parameters):
             raise ValidationError("Provide at least one RGB setting", api_name=spec.name)
 
     def call(self, name: str, **params: Any) -> Any:

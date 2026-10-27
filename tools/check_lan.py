@@ -17,7 +17,7 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from divoom_wifi import DivoomError, connect, discover_devices
+from divoom_wifi import DivoomError, TokenRequiredError, connect, discover_devices
 
 # (SDK method or raw command, expected business fields, invocation kind).
 READS = {
@@ -54,9 +54,11 @@ def check_device(device, timeout: float) -> dict:
                     result = client.call(api)
                 else:
                     payload = {"Command": api}
-                    if device.product == "timegate" and client._token is not None:
+                    if client.profile.local_token_required:
+                        if client._token is None:
+                            raise TokenRequiredError(f"Hardware {device.hardware} requires a LAN token", api_name=api)
                         client.set_local_token(client._token)
-                        payload["LocalToken"] = client._token
+                        payload[client.profile.token_field] = client._token
                     result = client._transport.request_json(
                         client.profile.method, row["endpoint"], payload, api_name=api,
                         status_fields=("error_code", "ReturnCode"))
