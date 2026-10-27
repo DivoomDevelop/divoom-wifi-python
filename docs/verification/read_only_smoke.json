@@ -1,0 +1,451 @@
+{
+  "date": "2026-10-27T15:38:37.977802+08:00",
+  "scope": "read-only",
+  "discovery_counts": {
+    "90": 3,
+    "92": 3,
+    "400": 1,
+    "510": 3,
+    "511": 3,
+    "700": 2,
+    "530": 13
+  },
+  "devices": [
+    {
+      "hardware": 90,
+      "product": "pixoo64",
+      "sample": 1,
+      "checks": [
+        {
+          "api": "get_settings",
+          "result": "pass",
+          "response_fields": [
+            "Brightness",
+            "ClockTime",
+            "CurClockId",
+            "GalleryShowTimeFlag",
+            "GalleryTime",
+            "GyrateAngle",
+            "LightSwitch",
+            "MirrorFlag",
+            "PowerOnChannelId",
+            "RotationFlag",
+            "SingleGalleyTime",
+            "TemperatureMode",
+            "Time24Flag",
+            "error_code"
+          ]
+        },
+        {
+          "api": "get_device_time",
+          "result": "pass",
+          "response_fields": [
+            "LocalTime",
+            "UTCTime",
+            "error_code"
+          ]
+        }
+      ]
+    },
+    {
+      "hardware": 90,
+      "product": "pixoo64",
+      "sample": 2,
+      "checks": [
+        {
+          "api": "get_settings",
+          "result": "pass",
+          "response_fields": [
+            "Brightness",
+            "ClockTime",
+            "CurClockId",
+            "GalleryShowTimeFlag",
+            "GalleryTime",
+            "GyrateAngle",
+            "LightSwitch",
+            "MirrorFlag",
+            "PowerOnChannelId",
+            "RotationFlag",
+            "SingleGalleyTime",
+            "TemperatureMode",
+            "Time24Flag",
+            "error_code"
+          ]
+        },
+        {
+          "api": "get_device_time",
+          "result": "pass",
+          "response_fields": [
+            "LocalTime",
+            "UTCTime",
+            "error_code"
+          ]
+        }
+      ]
+    },
+    {
+      "hardware": 92,
+      "product": "pixoo64",
+      "sample": 1,
+      "checks": [
+        {
+          "api": "get_settings",
+          "result": "pass",
+          "response_fields": [
+            "Brightness",
+            "ClockTime",
+            "CurClockId",
+            "GalleryShowTimeFlag",
+            "GalleryTime",
+            "GyrateAngle",
+            "LightSwitch",
+            "MirrorFlag",
+            "PowerOnChannelId",
+            "RotationFlag",
+            "SingleGalleyTime",
+            "TemperatureMode",
+            "Time24Flag",
+            "error_code"
+          ]
+        },
+        {
+          "api": "get_device_time",
+          "result": "pass",
+          "response_fields": [
+            "LocalTime",
+            "UTCTime",
+            "error_code"
+          ]
+        }
+      ]
+    },
+    {
+      "hardware": 92,
+      "product": "pixoo64",
+      "sample": 2,
+      "checks": [
+        {
+          "api": "get_settings",
+          "result": "pass",
+          "response_fields": [
+            "Brightness",
+            "ClockTime",
+            "CurClockId",
+            "GalleryShowTimeFlag",
+            "GalleryTime",
+            "GyrateAngle",
+            "LightSwitch",
+            "MirrorFlag",
+            "PowerOnChannelId",
+            "RotationFlag",
+            "SingleGalleyTime",
+            "TemperatureMode",
+            "Time24Flag",
+            "error_code"
+          ]
+        },
+        {
+          "api": "get_device_time",
+          "result": "pass",
+          "response_fields": [
+            "LocalTime",
+            "UTCTime",
+            "error_code"
+          ]
+        }
+      ]
+    },
+    {
+      "hardware": 400,
+      "product": "timegate",
+      "sample": 1,
+      "checks": [
+        {
+          "api": "get_fonts",
+          "result": "pass",
+          "response_fields": [
+            "FontList",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        },
+        {
+          "api": "get_channel_info",
+          "result": "pass",
+          "response_fields": [
+            "ChannelType",
+            "ClockId",
+            "DeviceId",
+            "LcdIndependence",
+            "LcdIndependenceList",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        }
+      ]
+    },
+    {
+      "hardware": 510,
+      "product": "timeframe",
+      "sample": 1,
+      "checks": [
+        {
+          "api": "probe_hardware",
+          "result": "unavailable",
+          "error": "NetworkError"
+        },
+        {
+          "api": "get_fonts",
+          "result": "unavailable",
+          "error": "DeviceError",
+          "code": 12,
+          "http_status": null
+        },
+        {
+          "api": "get_dial_list",
+          "result": "pass",
+          "response_fields": [
+            "ClockList",
+            "DeviceId",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        }
+      ]
+    },
+    {
+      "hardware": 510,
+      "product": "timeframe",
+      "sample": 2,
+      "checks": [
+        {
+          "api": "probe_hardware",
+          "result": "pass",
+          "reported_hardware": 510,
+          "firmware": 510175
+        },
+        {
+          "api": "get_fonts",
+          "result": "unavailable",
+          "error": "DeviceError",
+          "code": 12,
+          "http_status": null
+        },
+        {
+          "api": "get_dial_list",
+          "result": "pass",
+          "response_fields": [
+            "ClockList",
+            "DeviceId",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        }
+      ]
+    },
+    {
+      "hardware": 511,
+      "product": "timeframe",
+      "sample": 1,
+      "checks": [
+        {
+          "api": "probe_hardware",
+          "result": "pass",
+          "reported_hardware": 511,
+          "firmware": 511175
+        },
+        {
+          "api": "get_fonts",
+          "result": "unavailable",
+          "error": "DeviceError",
+          "code": 12,
+          "http_status": null
+        },
+        {
+          "api": "get_dial_list",
+          "result": "pass",
+          "response_fields": [
+            "ClockList",
+            "DeviceId",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        }
+      ]
+    },
+    {
+      "hardware": 511,
+      "product": "timeframe",
+      "sample": 2,
+      "checks": [
+        {
+          "api": "probe_hardware",
+          "result": "pass",
+          "reported_hardware": 511,
+          "firmware": 511175
+        },
+        {
+          "api": "get_fonts",
+          "result": "unavailable",
+          "error": "DeviceError",
+          "code": 12,
+          "http_status": null
+        },
+        {
+          "api": "get_dial_list",
+          "result": "pass",
+          "response_fields": [
+            "ClockList",
+            "DeviceId",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        }
+      ]
+    },
+    {
+      "hardware": 530,
+      "product": "astrotoo",
+      "sample": 1,
+      "checks": [
+        {
+          "api": "get_hardware_version",
+          "result": "unavailable",
+          "error": "NetworkError",
+          "code": null,
+          "http_status": null
+        },
+        {
+          "api": "get_lan_capabilities",
+          "result": "unavailable",
+          "error": "NetworkError",
+          "code": null,
+          "http_status": null
+        },
+        {
+          "api": "get_brightness",
+          "result": "unavailable",
+          "error": "NetworkError",
+          "code": null,
+          "http_status": null
+        },
+        {
+          "api": "get_screen",
+          "result": "unavailable",
+          "error": "NetworkError",
+          "code": null,
+          "http_status": null
+        }
+      ]
+    },
+    {
+      "hardware": 530,
+      "product": "astrotoo",
+      "sample": 2,
+      "checks": [
+        {
+          "api": "get_hardware_version",
+          "result": "pass",
+          "response_fields": [
+            "AppPreviewMaxHeight",
+            "AppPreviewMaxWidth",
+            "AppPreviewUploadFormat",
+            "AssetTransfer",
+            "BackgroundMaxBytesExclusive",
+            "BundleMaxBytes",
+            "CanvasHeight",
+            "CanvasWidth",
+            "ClockShareCommand",
+            "Command",
+            "DeviceType",
+            "FirmwareVersion",
+            "Hardware",
+            "JsonMaxBytes",
+            "LanApiVersion",
+            "LocalAssetUploadPath",
+            "LocalOnly",
+            "Model",
+            "OutboundFileUpload",
+            "PhotoUploadMaxBytes",
+            "PhotoVideoMaxSeconds",
+            "ReturnCode",
+            "SnapshotPath",
+            "Software",
+            "SupportsAssetBundle",
+            "SupportsClockShare",
+            "SupportsClockUpdateMessageInfo",
+            "SupportsClockUploadClassify",
+            "SupportsClockUploadVisibility",
+            "SupportsPhotoLibrary",
+            "UploadPersistence"
+          ],
+          "reported_hardware": 530,
+          "firmware": 530062
+        },
+        {
+          "api": "get_lan_capabilities",
+          "result": "pass",
+          "response_fields": [
+            "AppPreviewMaxHeight",
+            "AppPreviewMaxWidth",
+            "AppPreviewUploadFormat",
+            "AssetTransfer",
+            "BackgroundMaxBytesExclusive",
+            "BundleMaxBytes",
+            "CanvasHeight",
+            "CanvasWidth",
+            "ClockShareCommand",
+            "Command",
+            "DeviceType",
+            "FirmwareVersion",
+            "Hardware",
+            "JsonMaxBytes",
+            "LanApiVersion",
+            "LocalAssetUploadPath",
+            "LocalOnly",
+            "Model",
+            "OutboundFileUpload",
+            "PhotoUploadMaxBytes",
+            "PhotoVideoMaxSeconds",
+            "ReturnCode",
+            "SnapshotPath",
+            "Software",
+            "SupportsAssetBundle",
+            "SupportsClockShare",
+            "SupportsClockUpdateMessageInfo",
+            "SupportsClockUploadClassify",
+            "SupportsClockUploadVisibility",
+            "SupportsPhotoLibrary",
+            "UploadPersistence"
+          ]
+        },
+        {
+          "api": "get_brightness",
+          "result": "pass",
+          "response_fields": [
+            "Brightness",
+            "Command",
+            "DeviceId",
+            "DeviceType",
+            "PacketFlag",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        },
+        {
+          "api": "get_screen",
+          "result": "pass",
+          "response_fields": [
+            "Command",
+            "DeviceId",
+            "DeviceType",
+            "OnOff",
+            "PacketFlag",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        }
+      ]
+    }
+  ]
+}

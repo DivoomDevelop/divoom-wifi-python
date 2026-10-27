@@ -1,0 +1,11 @@
+{
+  "text_id": 1,
+  "x": 0,
+  "y": 0,
+  "dir": 0,
+  "font": 4,
+  "text_width": 56,
+  "text_string": "Hello Divoom",
+  "speed": 30,
+  "color": "#FFFFFF"
+}

@@ -1,0 +1,1301 @@
+{
+  "reference_date": "2026-10-27",
+  "pages": [
+    {
+      "page_id": 26,
+      "product": "pixoo64",
+      "title": "System reboots",
+      "url": "https://docin.divoom-gz.com/web/#/5/26",
+      "sha256": "1829e5ff843c9a43b7afe690510cc7347bdc55e45d82ff29002d5ea5bc8f87a1",
+      "kind": "api",
+      "api": "reboot"
+    },
+    {
+      "page_id": 27,
+      "product": "pixoo64",
+      "title": "Dial Type",
+      "url": "https://docin.divoom-gz.com/web/#/5/27",
+      "sha256": "c21e4cfd1c7de12e971e5f9093a47a643258b4e5a48c4452d3c1ffd98d3ba600",
+      "kind": "api",
+      "api": "get_dial_types"
+    },
+    {
+      "page_id": 28,
+      "product": "pixoo64",
+      "title": "Dial List",
+      "url": "https://docin.divoom-gz.com/web/#/5/28",
+      "sha256": "ae350eb8e738e20ff120bd04894d3375e4738df4a945412c1664ab1136ee0279",
+      "kind": "api",
+      "api": "get_dial_list"
+    },
+    {
+      "page_id": 29,
+      "product": "pixoo64",
+      "title": "Select faces Channel",
+      "url": "https://docin.divoom-gz.com/web/#/5/29",
+      "sha256": "1a26a0a540d35616f78458e71b964fa85f8f0830831fe099c75c4d41879f52f9",
+      "kind": "api",
+      "api": "select_clock"
+    },
+    {
+      "page_id": 30,
+      "product": "pixoo64",
+      "title": "Get select face id",
+      "url": "https://docin.divoom-gz.com/web/#/5/30",
+      "sha256": "f838f9a93b5dc84123ccddc27c1dc118c45bdbfa11239f2ef310f7312a43cc20",
+      "kind": "api",
+      "api": "get_current_clock"
+    },
+    {
+      "page_id": 31,
+      "product": "pixoo64",
+      "title": "select channel",
+      "url": "https://docin.divoom-gz.com/web/#/5/31",
+      "sha256": "fadaed235260d795ff7fa494135c6cde42550a159ea25a2422415b0f03c9e699",
+      "kind": "api",
+      "api": "select_channel"
+    },
+    {
+      "page_id": 32,
+      "product": "pixoo64",
+      "title": "control custom channel",
+      "url": "https://docin.divoom-gz.com/web/#/5/32",
+      "sha256": "1fb29f9fd1739aae976d55913f9fee6eb17591554ece2a2cc151b31e7c8547a9",
+      "kind": "api",
+      "api": "select_custom_page"
+    },
+    {
+      "page_id": 33,
+      "product": "pixoo64",
+      "title": "Visualizer Channel",
+      "url": "https://docin.divoom-gz.com/web/#/5/33",
+      "sha256": "399511df164220692213c18b840709d15afad8d9a31b52fca6ca1495d01949c6",
+      "kind": "api",
+      "api": "select_visualizer"
+    },
+    {
+      "page_id": 34,
+      "product": "pixoo64",
+      "title": "Cloud Channel",
+      "url": "https://docin.divoom-gz.com/web/#/5/34",
+      "sha256": "06286969cd197f975a9022c959be5b1ac951096b14c1da629bb5105cdd267031",
+      "kind": "api",
+      "api": "select_cloud_channel"
+    },
+    {
+      "page_id": 35,
+      "product": "pixoo64",
+      "title": "get cureent channel",
+      "url": "https://docin.divoom-gz.com/web/#/5/35",
+      "sha256": "a0b64d20386025920f80f8a992b9c0e4b3d651aa7372428648969fed3109cf5b",
+      "kind": "api",
+      "api": "get_current_channel"
+    },
+    {
+      "page_id": 36,
+      "product": "pixoo64",
+      "title": "set brightness",
+      "url": "https://docin.divoom-gz.com/web/#/5/36",
+      "sha256": "c3e4e1b6731700f67941092070ca02884951a60bee6e1d01da7fa8de17678888",
+      "kind": "api",
+      "api": "set_brightness"
+    },
+    {
+      "page_id": 37,
+      "product": "pixoo64",
+      "title": "get all setting",
+      "url": "https://docin.divoom-gz.com/web/#/5/37",
+      "sha256": "4af99b55b55e5553ff9a814b04b9b4f7bd40628172898a357c2fd29e41568504",
+      "kind": "api",
+      "api": "get_settings"
+    },
+    {
+      "page_id": 38,
+      "product": "pixoo64",
+      "title": "Weather area setting",
+      "url": "https://docin.divoom-gz.com/web/#/5/38",
+      "sha256": "6a97f717d91186508c34c26197b0dd5131d245899ac2b10e43d2dd43d3de0a2f",
+      "kind": "api",
+      "api": "set_weather_location"
+    },
+    {
+      "page_id": 39,
+      "product": "pixoo64",
+      "title": "Set Time Zone ",
+      "url": "https://docin.divoom-gz.com/web/#/5/39",
+      "sha256": "8ae92a4511a7036c5952dbdeb3a9af167912ab8e734cf75df71e1635163fb38a",
+      "kind": "api",
+      "api": "set_timezone"
+    },
+    {
+      "page_id": 40,
+      "product": "pixoo64",
+      "title": "system Time",
+      "url": "https://docin.divoom-gz.com/web/#/5/40",
+      "sha256": "8d7793118728c1ae98e0993d497b440126543aeb1b1699b554adf05e3d8671b0",
+      "kind": "api",
+      "api": "set_utc"
+    },
+    {
+      "page_id": 41,
+      "product": "pixoo64",
+      "title": "Screen switch",
+      "url": "https://docin.divoom-gz.com/web/#/5/41",
+      "sha256": "b0ff4e63699b5778b7855204857d0548b08cdfc73e270404d5d4276bb3f2e86d",
+      "kind": "api",
+      "api": "set_screen"
+    },
+    {
+      "page_id": 42,
+      "product": "pixoo64",
+      "title": "Get Device Time",
+      "url": "https://docin.divoom-gz.com/web/#/5/42",
+      "sha256": "982afd4c80a58da6edfb0fe59f9d333a255e96f96dfe0953daa97bd92413010e",
+      "kind": "api",
+      "api": "get_device_time"
+    },
+    {
+      "page_id": 43,
+      "product": "pixoo64",
+      "title": "Set temperature mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/43",
+      "sha256": "762eac0861796844ad12a8d45634614c6f5d768cde9423cd3c2c49aeb30e4102",
+      "kind": "api",
+      "api": "set_temperature_mode"
+    },
+    {
+      "page_id": 44,
+      "product": "pixoo64",
+      "title": "Set  Rotation angle",
+      "url": "https://docin.divoom-gz.com/web/#/5/44",
+      "sha256": "b1b206cc0ca1963560a642910e593547bd0f9a6da22e3ca0c3cc4149c254247e",
+      "kind": "api",
+      "api": "set_rotation"
+    },
+    {
+      "page_id": 45,
+      "product": "pixoo64",
+      "title": "Set  Mirror mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/45",
+      "sha256": "5a308b2b5326d77d8ad0cbeabc06f64798959ddddaab775fba063d8e9c1f6887",
+      "kind": "api",
+      "api": "set_mirror_mode"
+    },
+    {
+      "page_id": 46,
+      "product": "pixoo64",
+      "title": "Set  hour mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/46",
+      "sha256": "e88003cf70f8509077d1904faf90d005960e407c2979889c1db0c3a5c4e451dc",
+      "kind": "api",
+      "api": "set_hour_mode"
+    },
+    {
+      "page_id": 47,
+      "product": "pixoo64",
+      "title": "Set  High Ligit mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/47",
+      "sha256": "8c04f3f0547f45a9eade9bceedf5f2b8c58977fb4133c1bcc89bd3b69bc56c97",
+      "kind": "api",
+      "api": "set_highlight_mode"
+    },
+    {
+      "page_id": 48,
+      "product": "pixoo64",
+      "title": "Set  White Balance",
+      "url": "https://docin.divoom-gz.com/web/#/5/48",
+      "sha256": "4a69398601c3cee0cb36171b7fd9f478ee38e19ff44b696255d8a4372a1dfedc",
+      "kind": "api",
+      "api": "set_white_balance"
+    },
+    {
+      "page_id": 49,
+      "product": "pixoo64",
+      "title": "Get the Weather  of the device",
+      "url": "https://docin.divoom-gz.com/web/#/5/49",
+      "sha256": "b36ad2c4b04866b32c39d76cf9b532bc527c502fc3177846db1479316d7f4c1a",
+      "kind": "api",
+      "api": "get_weather"
+    },
+    {
+      "page_id": 137,
+      "product": "pixoo64",
+      "title": "SetGalleryTime",
+      "url": "https://docin.divoom-gz.com/web/#/5/137",
+      "sha256": "9e20b6d50658c00e50dfdb1761c094404b6ddc0e6735612fff8b5c3cd518c29c",
+      "kind": "api",
+      "api": "set_gallery_time"
+    },
+    {
+      "page_id": 355,
+      "product": "pixoo64",
+      "title": "Set Subscribe Gallery attribute",
+      "url": "https://docin.divoom-gz.com/web/#/5/355",
+      "sha256": "9e13331129855ca29e8197dedfa8519b8ee0e44715eecb28a438ea84e533a565",
+      "kind": "api",
+      "api": "set_gallery_time"
+    },
+    {
+      "page_id": 50,
+      "product": "pixoo64",
+      "title": "Set countdown tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/50",
+      "sha256": "ee75fa343187ff4e4520190d9df5e6ffce152891ddcf8c1b826263c3e2002f45",
+      "kind": "api",
+      "api": "set_countdown"
+    },
+    {
+      "page_id": 51,
+      "product": "pixoo64",
+      "title": "Set stopwatch tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/51",
+      "sha256": "60a848f9b0361da04e12cd57983af76faeed987f9a84036df250eb65204b5b99",
+      "kind": "api",
+      "api": "set_stopwatch"
+    },
+    {
+      "page_id": 52,
+      "product": "pixoo64",
+      "title": "Set scoreboard tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/52",
+      "sha256": "09af91cca30a433675b237f3f368e3276f586d6f9aa40e13bd7221f1fd8ab8f2",
+      "kind": "api",
+      "api": "set_scoreboard"
+    },
+    {
+      "page_id": 53,
+      "product": "pixoo64",
+      "title": "Set noise tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/53",
+      "sha256": "0b49d7ce5f2246d0f3a18e1d2ec45155c2d16785680302073cd1e64fdb420551",
+      "kind": "api",
+      "api": "set_noise_tool"
+    },
+    {
+      "page_id": 54,
+      "product": "pixoo64",
+      "title": "play gif",
+      "url": "https://docin.divoom-gz.com/web/#/5/54",
+      "sha256": "5c389cde1cd2f433b6e0a12d3e21c76e460122d1117f2925998d2c58106ccbc0",
+      "kind": "api",
+      "api": "play_gif"
+    },
+    {
+      "page_id": 55,
+      "product": "pixoo64",
+      "title": "Get  sending animation PicId ",
+      "url": "https://docin.divoom-gz.com/web/#/5/55",
+      "sha256": "0f774a65ddfb22f74663dc90c728d8d7fdf8ca9c7ed88ff06a7fecda91a4ea54",
+      "kind": "api",
+      "api": "get_animation_id"
+    },
+    {
+      "page_id": 56,
+      "product": "pixoo64",
+      "title": "Reset  sending animation PicId",
+      "url": "https://docin.divoom-gz.com/web/#/5/56",
+      "sha256": "a2dfba4ef84a42cb957d91a82ac78ade6bd2a4647aab80b0ed70053f9e59c12e",
+      "kind": "api",
+      "api": "reset_animation_id"
+    },
+    {
+      "page_id": 57,
+      "product": "pixoo64",
+      "title": "Send animation",
+      "url": "https://docin.divoom-gz.com/web/#/5/57",
+      "sha256": "829e98cc827eca55f3d8486ed83f6a431c333c916ff84268396ffec726da1a80",
+      "kind": "api",
+      "api": "send_animation"
+    },
+    {
+      "page_id": 58,
+      "product": "pixoo64",
+      "title": "Send Text",
+      "url": "https://docin.divoom-gz.com/web/#/5/58",
+      "sha256": "fbb2d16430d92ddda77d944e091f154c7e8a913525a45a9f1c96d79abe59d023",
+      "kind": "api",
+      "api": "send_text"
+    },
+    {
+      "page_id": 59,
+      "product": "pixoo64",
+      "title": "Clear all text area",
+      "url": "https://docin.divoom-gz.com/web/#/5/59",
+      "sha256": "2ed68e93004b148eea2e8c6f08370fb0ef4983cb89a010bd8964b2b6721e0725",
+      "kind": "api",
+      "api": "clear_text"
+    },
+    {
+      "page_id": 60,
+      "product": "pixoo64",
+      "title": "Get font list",
+      "url": "https://docin.divoom-gz.com/web/#/5/60",
+      "sha256": "a67af1439f8dde1dade389d2448edf58551d3e25cea0514380aa478a0f534f30",
+      "kind": "api",
+      "api": "get_fonts"
+    },
+    {
+      "page_id": 61,
+      "product": "pixoo64",
+      "title": "Send display list ",
+      "url": "https://docin.divoom-gz.com/web/#/5/61",
+      "sha256": "7ac00f12d42dfaea55012db79cd7529ee2a2cddbe7947febec8ec0aae4adb952",
+      "kind": "api",
+      "api": "send_display_list"
+    },
+    {
+      "page_id": 62,
+      "product": "pixoo64",
+      "title": "Play Buzzer",
+      "url": "https://docin.divoom-gz.com/web/#/5/62",
+      "sha256": "8d7e8d4529e3d33df059a0ee295393c0c44a1c7aabf7d334bafaa6118a1c187b",
+      "kind": "api",
+      "api": "play_buzzer"
+    },
+    {
+      "page_id": 63,
+      "product": "pixoo64",
+      "title": "play divoom gif",
+      "url": "https://docin.divoom-gz.com/web/#/5/63",
+      "sha256": "30bdb1c236ea70b56fd092440484ec5fac79d3650986e2a0e484c6d6150855e3",
+      "kind": "api",
+      "api": "play_divoom_gif"
+    },
+    {
+      "page_id": 64,
+      "product": "pixoo64",
+      "title": "Get Img Upload List",
+      "url": "https://docin.divoom-gz.com/web/#/5/64",
+      "sha256": "8b225be1fcb224c1e41f253f8409b21292c00d2ddeae1c8d12bc58ffd1466240",
+      "kind": "api",
+      "api": "get_uploaded_images"
+    },
+    {
+      "page_id": 65,
+      "product": "pixoo64",
+      "title": "Get My Like Img List",
+      "url": "https://docin.divoom-gz.com/web/#/5/65",
+      "sha256": "3096eafd882f4a3027945d3e0585d38431ef21d21046af574604be1fc2cec118",
+      "kind": "api",
+      "api": "get_liked_images"
+    },
+    {
+      "page_id": 356,
+      "product": "pixoo64",
+      "title": "save gif",
+      "url": "https://docin.divoom-gz.com/web/#/5/356",
+      "sha256": "ec30b980ca4caf4f1efc2266cace64dd44d3a58e8536ab53fd0cac33022074d7",
+      "kind": "api",
+      "api": "save_gif"
+    },
+    {
+      "page_id": 357,
+      "product": "pixoo64",
+      "title": "Play a frame of a GIF file",
+      "url": "https://docin.divoom-gz.com/web/#/5/357",
+      "sha256": "8ff515d8c51572e43f6b99cc37579ac52ead42745436c3cd69332f37e8872441",
+      "kind": "api",
+      "api": "play_gif_frame"
+    },
+    {
+      "page_id": 66,
+      "product": "pixoo64",
+      "title": "Command list",
+      "url": "https://docin.divoom-gz.com/web/#/5/66",
+      "sha256": "21d6d757a47efa6d2de4867b0c731158e2aa1c7d20246d8dda115f5c9a5ec38b",
+      "kind": "api",
+      "api": "send_command_list"
+    },
+    {
+      "page_id": 67,
+      "product": "pixoo64",
+      "title": "Url Command file",
+      "url": "https://docin.divoom-gz.com/web/#/5/67",
+      "sha256": "65cad669ed60abd3ca4cdfb7a3c829555d7c4b25f8db2fe184b455e3a7a64c1c",
+      "kind": "api",
+      "api": "use_command_url"
+    },
+    {
+      "page_id": 140,
+      "product": "timegate",
+      "title": "System reboots",
+      "url": "https://docin.divoom-gz.com/web/#/5/140",
+      "sha256": "796730a68cc72a76cb1b16af4f534b9b2e456504506d24b757132e12e3bfe356",
+      "kind": "api",
+      "api": "reboot"
+    },
+    {
+      "page_id": 102,
+      "product": "timegate",
+      "title": "set brightness",
+      "url": "https://docin.divoom-gz.com/web/#/5/102",
+      "sha256": "a5baf73aed35202737d5469cf2e86ef6c2238fb53153dc4d9ebffd00c6f75a02",
+      "kind": "api",
+      "api": "set_brightness"
+    },
+    {
+      "page_id": 103,
+      "product": "timegate",
+      "title": "get all setting",
+      "url": "https://docin.divoom-gz.com/web/#/5/103",
+      "sha256": "b734cdd17cfd67f723832c214a04670c6697c07a23952dbf78ca05e36d01d4c1",
+      "kind": "api",
+      "api": "get_settings"
+    },
+    {
+      "page_id": 104,
+      "product": "timegate",
+      "title": "Weather area setting",
+      "url": "https://docin.divoom-gz.com/web/#/5/104",
+      "sha256": "aef94751b5d21d40966ba7521556996eb49878ffc0e86cfd86fe7a33f528987a",
+      "kind": "api",
+      "api": "set_weather_location"
+    },
+    {
+      "page_id": 105,
+      "product": "timegate",
+      "title": "Set Time Zone ",
+      "url": "https://docin.divoom-gz.com/web/#/5/105",
+      "sha256": "3753b3ddab387f6bda7f7fab15b7ae601f6891652ef049464a4309bb316f93be",
+      "kind": "api",
+      "api": "set_timezone"
+    },
+    {
+      "page_id": 106,
+      "product": "timegate",
+      "title": "system Time",
+      "url": "https://docin.divoom-gz.com/web/#/5/106",
+      "sha256": "4ff63b2eac74b697fa41c34953eade7c184c033119cecbcee70233562b7e7b85",
+      "kind": "api",
+      "api": "set_utc"
+    },
+    {
+      "page_id": 107,
+      "product": "timegate",
+      "title": "Screen switch",
+      "url": "https://docin.divoom-gz.com/web/#/5/107",
+      "sha256": "c155c10c8d6b863c3c84fb9bf82c659e95bcd32d2d5a500592a442e19a92797e",
+      "kind": "api",
+      "api": "set_screen"
+    },
+    {
+      "page_id": 108,
+      "product": "timegate",
+      "title": "Get Device Time",
+      "url": "https://docin.divoom-gz.com/web/#/5/108",
+      "sha256": "e3868a20d7f0527c485809c88d3d99bbb0f552b81c185c9cc09c5bf2862e50cc",
+      "kind": "api",
+      "api": "get_device_time"
+    },
+    {
+      "page_id": 109,
+      "product": "timegate",
+      "title": "Set temperature mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/109",
+      "sha256": "76ee4c0594096884ed62b6024ce8a95b1b813df8a69adcfb1007a955f0134986",
+      "kind": "api",
+      "api": "set_temperature_mode"
+    },
+    {
+      "page_id": 110,
+      "product": "timegate",
+      "title": "Set  Mirror mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/110",
+      "sha256": "1524ea2098ef3a5eed4f562c6ba30c3c48308bbbcd88516be2f744f7e634da2e",
+      "kind": "api",
+      "api": "set_mirror_mode"
+    },
+    {
+      "page_id": 111,
+      "product": "timegate",
+      "title": "Set  hour mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/111",
+      "sha256": "86d39e5c889e924a3b02403423ef09976bcb17acb3767523eccd4ca82a8e0094",
+      "kind": "api",
+      "api": "set_hour_mode"
+    },
+    {
+      "page_id": 112,
+      "product": "timegate",
+      "title": "Get the Weather  of the device",
+      "url": "https://docin.divoom-gz.com/web/#/5/112",
+      "sha256": "311f0caad8c70876fa8f4c0bb57fd8ea61fc940d10e4a7b649fceb009f522dc7",
+      "kind": "api",
+      "api": "get_weather"
+    },
+    {
+      "page_id": 138,
+      "product": "timegate",
+      "title": "SetGalleryTime",
+      "url": "https://docin.divoom-gz.com/web/#/5/138",
+      "sha256": "0684a51ebdd67fadabb900e3d54eb3bf88659f482c6917c8211147b6aa025e56",
+      "kind": "api",
+      "api": "set_gallery_time"
+    },
+    {
+      "page_id": 353,
+      "product": "timegate",
+      "title": "Set RGB Information",
+      "url": "https://docin.divoom-gz.com/web/#/5/353",
+      "sha256": "0f1056001e2c0682e77192f0aad5151c4b41acf0a4a8a2d691f871a2596fc085",
+      "kind": "api",
+      "api": "set_rgb"
+    },
+    {
+      "page_id": 113,
+      "product": "timegate",
+      "title": "Sub Dial Type",
+      "url": "https://docin.divoom-gz.com/web/#/5/113",
+      "sha256": "c1ba7c62d41f6dd4f2ac9cb4e6277e74a18b20dd6780f20f9badef8d946dd355",
+      "kind": "api",
+      "api": "get_dial_types"
+    },
+    {
+      "page_id": 114,
+      "product": "timegate",
+      "title": "Indeividual Dial List",
+      "url": "https://docin.divoom-gz.com/web/#/5/114",
+      "sha256": "2162196f5a7175f1870d3dd383228dc15e38d664b2735632aac01fe746bc8f96",
+      "kind": "api",
+      "api": "get_dial_list"
+    },
+    {
+      "page_id": 115,
+      "product": "timegate",
+      "title": "get whole dial List",
+      "url": "https://docin.divoom-gz.com/web/#/5/115",
+      "sha256": "6da7cf5796a88ce5b731f79b84f8e92c7ef44f4194af34deb7d2234f223e808b",
+      "kind": "api",
+      "api": "get_whole_dial_list"
+    },
+    {
+      "page_id": 116,
+      "product": "timegate",
+      "title": "Select  Whole Dial",
+      "url": "https://docin.divoom-gz.com/web/#/5/116",
+      "sha256": "e12068c385487ad77b6cbb53aeea3b8d7c7468f3712de9af69ca50f1a6c11337",
+      "kind": "api",
+      "api": "select_whole_clock"
+    },
+    {
+      "page_id": 117,
+      "product": "timegate",
+      "title": "Select  Channel Type",
+      "url": "https://docin.divoom-gz.com/web/#/5/117",
+      "sha256": "607c8a4264da9642aacff06d1b706fac8fd2411cc3352c99e463e1b2102026ce",
+      "kind": "api",
+      "api": "select_channel_type"
+    },
+    {
+      "page_id": 118,
+      "product": "timegate",
+      "title": "Get  Channel Information",
+      "url": "https://docin.divoom-gz.com/web/#/5/118",
+      "sha256": "8921c20e13cc317105e6a7f6837d98eeb61da4465a762293f95ea146b624fc56",
+      "kind": "api",
+      "api": "get_channel_info"
+    },
+    {
+      "page_id": 119,
+      "product": "timegate",
+      "title": "Select Indeividual dial",
+      "url": "https://docin.divoom-gz.com/web/#/5/119",
+      "sha256": "918e3a3d51bd10912c7e2b00f6ef863b04f15ff47ac4fd3ef1735b4de7da29a9",
+      "kind": "api",
+      "api": "select_clock"
+    },
+    {
+      "page_id": 120,
+      "product": "timegate",
+      "title": "Select Indeividual Visualizer Channel",
+      "url": "https://docin.divoom-gz.com/web/#/5/120",
+      "sha256": "1cd04c4fc1f37ec4d2a2a1f96bcf0ad6d8425c2ccd5d30e74430af0e6ff1a474",
+      "kind": "api",
+      "api": "select_visualizer"
+    },
+    {
+      "page_id": 121,
+      "product": "timegate",
+      "title": "Set countdown tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/121",
+      "sha256": "ba1651502400428cdce17d07c82f31c9400c6d6b3313614876c4021434933600",
+      "kind": "api",
+      "api": "set_countdown"
+    },
+    {
+      "page_id": 122,
+      "product": "timegate",
+      "title": "Set stopwatch tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/122",
+      "sha256": "8002978c8189902b04a0333fb51c95b3586d39ae222907a2ff1d55aa8fb47aa6",
+      "kind": "api",
+      "api": "set_stopwatch"
+    },
+    {
+      "page_id": 123,
+      "product": "timegate",
+      "title": "Set scoreboard tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/123",
+      "sha256": "468f1b65bf47f5b96a4cf3c7b78141011ab71464b5ae50cd4245496f0adcab12",
+      "kind": "api",
+      "api": "set_scoreboard"
+    },
+    {
+      "page_id": 124,
+      "product": "timegate",
+      "title": "Set noise tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/124",
+      "sha256": "eb153150ceb19e3c6fc928427064c296556c722207cc80e20f7687daa673f50a",
+      "kind": "api",
+      "api": "set_noise_tool"
+    },
+    {
+      "page_id": 125,
+      "product": "timegate",
+      "title": "Play Buzzer",
+      "url": "https://docin.divoom-gz.com/web/#/5/125",
+      "sha256": "e58bc5158e81ff99461ca144ec1ddaf921da03c260684f47f78a69d1bd963927",
+      "kind": "api",
+      "api": "play_buzzer"
+    },
+    {
+      "page_id": 126,
+      "product": "timegate",
+      "title": "Get My Like Img List",
+      "url": "https://docin.divoom-gz.com/web/#/5/126",
+      "sha256": "3096eafd882f4a3027945d3e0585d38431ef21d21046af574604be1fc2cec118",
+      "kind": "api",
+      "api": "get_liked_images"
+    },
+    {
+      "page_id": 127,
+      "product": "timegate",
+      "title": "Get Img Upload List",
+      "url": "https://docin.divoom-gz.com/web/#/5/127",
+      "sha256": "8b225be1fcb224c1e41f253f8409b21292c00d2ddeae1c8d12bc58ffd1466240",
+      "kind": "api",
+      "api": "get_uploaded_images"
+    },
+    {
+      "page_id": 128,
+      "product": "timegate",
+      "title": "play divoom gif",
+      "url": "https://docin.divoom-gz.com/web/#/5/128",
+      "sha256": "20bb96984714300f0ff7bdb3ede06d1cb59e130bb135c1491a9f5e5adc6a7979",
+      "kind": "api",
+      "api": "play_divoom_gif"
+    },
+    {
+      "page_id": 129,
+      "product": "timegate",
+      "title": "play gif",
+      "url": "https://docin.divoom-gz.com/web/#/5/129",
+      "sha256": "081bc15dd99a193945ebe2d78fc6d4f98059eb2002eddf7f64b00e0a408a6754",
+      "kind": "api",
+      "api": "play_gif"
+    },
+    {
+      "page_id": 130,
+      "product": "timegate",
+      "title": "play gif in all gif",
+      "url": "https://docin.divoom-gz.com/web/#/5/130",
+      "sha256": "12bd5f52f46692c8fcc6ff3bd4b14581e38e6ba8579f13612f65944e40430b51",
+      "kind": "api",
+      "api": "play_gif_on_all_screens"
+    },
+    {
+      "page_id": 133,
+      "product": "timegate",
+      "title": "Send animation",
+      "url": "https://docin.divoom-gz.com/web/#/5/133",
+      "sha256": "c3dcd4467f0fec89bd7ec6579aac13e677cba497039e39b8018d5d4dc230921f",
+      "kind": "api",
+      "api": "send_animation"
+    },
+    {
+      "page_id": 134,
+      "product": "timegate",
+      "title": "Send Text",
+      "url": "https://docin.divoom-gz.com/web/#/5/134",
+      "sha256": "7a3955c2b3d662dcec63b50602b94cb83deba174b4d2569bd753a7fb354598d4",
+      "kind": "api",
+      "api": "send_text"
+    },
+    {
+      "page_id": 141,
+      "product": "timegate",
+      "title": "Clear text area",
+      "url": "https://docin.divoom-gz.com/web/#/5/141",
+      "sha256": "7634d04713bc345138f7745e87557345c378fda6f15554e4daec65f56804fd1b",
+      "kind": "api",
+      "api": "clear_text"
+    },
+    {
+      "page_id": 131,
+      "product": "timegate",
+      "title": "Get font list",
+      "url": "https://docin.divoom-gz.com/web/#/5/131",
+      "sha256": "1462ea84fe005d00c273a404e82034f1f261364d3038ae30e4bf49e050703d98",
+      "kind": "api",
+      "api": "get_fonts"
+    },
+    {
+      "page_id": 132,
+      "product": "timegate",
+      "title": "Send display list ",
+      "url": "https://docin.divoom-gz.com/web/#/5/132",
+      "sha256": "1a8e34f899ddc72f9561fbdb73aac49e10d1db65e5e1e0708db064000730ec65",
+      "kind": "api",
+      "api": "send_display_list"
+    },
+    {
+      "page_id": 135,
+      "product": "timegate",
+      "title": "Command list",
+      "url": "https://docin.divoom-gz.com/web/#/5/135",
+      "sha256": "e6c10ba869db122f8eb0204aaad1f094100d006ee9403c7f5b0f69ae2b7f0881",
+      "kind": "api",
+      "api": "send_command_list"
+    },
+    {
+      "page_id": 136,
+      "product": "timegate",
+      "title": "Url Command file",
+      "url": "https://docin.divoom-gz.com/web/#/5/136",
+      "sha256": "a6209ff69604c27f6d0344fe5107e7af7562127fdd192dbea98f89427ec15070",
+      "kind": "api",
+      "api": "use_command_url"
+    },
+    {
+      "page_id": 358,
+      "product": "timeframe",
+      "title": "command url",
+      "url": "https://docin.divoom-gz.com/web/#/5/358",
+      "sha256": "8907cd0575969242ae97e452195fd10301e303370ee0e912ed5146962a2e8b28",
+      "kind": "reference",
+      "api": null
+    },
+    {
+      "page_id": 359,
+      "product": "timeframe",
+      "title": "System reboots",
+      "url": "https://docin.divoom-gz.com/web/#/5/359",
+      "sha256": "51c7b918b1248f8047a146a4969a960206c54422166d5f23117b16864273bec8",
+      "kind": "api",
+      "api": "reboot"
+    },
+    {
+      "page_id": 370,
+      "product": "timeframe",
+      "title": "Set countdown tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/370",
+      "sha256": "62c7d1ef21ee10b4076b71396ef941dcf7f5b01d3243e770c4a35a9a08191f8b",
+      "kind": "api",
+      "api": "set_countdown"
+    },
+    {
+      "page_id": 371,
+      "product": "timeframe",
+      "title": "Set stopwatch tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/371",
+      "sha256": "baf5c0868e394271624c49abb327427f1f192af9349879561901f52c03baebc3",
+      "kind": "api",
+      "api": "set_stopwatch"
+    },
+    {
+      "page_id": 372,
+      "product": "timeframe",
+      "title": "Set scoreboard tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/372",
+      "sha256": "738a5dbdd2bf93d69c0f530ef2d5dde30f828a861c54ec53be2a7c54c7fd742a",
+      "kind": "api",
+      "api": "set_scoreboard"
+    },
+    {
+      "page_id": 373,
+      "product": "timeframe",
+      "title": "Set noise tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/373",
+      "sha256": "92cdb84de612f998ca3bcaf9081ba1d8a330c81c12d055d9048d598f2ff133d8",
+      "kind": "api",
+      "api": "set_noise_tool"
+    },
+    {
+      "page_id": 362,
+      "product": "timeframe",
+      "title": "set brightness",
+      "url": "https://docin.divoom-gz.com/web/#/5/362",
+      "sha256": "e60b4866d895fc36131cc771bd1d749c869575e34c8f88e768c3ffce35e73350",
+      "kind": "api",
+      "api": "set_brightness"
+    },
+    {
+      "page_id": 363,
+      "product": "timeframe",
+      "title": "Weather area setting",
+      "url": "https://docin.divoom-gz.com/web/#/5/363",
+      "sha256": "94d9f1eb91a3303c38be8ea0a1b5eeb576f6d203727db04ca970391b2403826c",
+      "kind": "api",
+      "api": "set_weather_location"
+    },
+    {
+      "page_id": 367,
+      "product": "timeframe",
+      "title": "Screen switch",
+      "url": "https://docin.divoom-gz.com/web/#/5/367",
+      "sha256": "23b583c8faf8ca55a02983c5257bd2aebb14579d112fedc7672c3aa55ee5be84",
+      "kind": "api",
+      "api": "set_screen"
+    },
+    {
+      "page_id": 368,
+      "product": "timeframe",
+      "title": "Set  Mirror mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/368",
+      "sha256": "fd3298e40e71f4f85b620ce1f29369457859007228b48294cb50b10b00b96442",
+      "kind": "api",
+      "api": "set_mirror_mode"
+    },
+    {
+      "page_id": 369,
+      "product": "timeframe",
+      "title": "Set  hour mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/369",
+      "sha256": "d34ef94d27a09f8c5100bd4afa7665ce53ba1abd878c068a3e2d7d6059218dc8",
+      "kind": "api",
+      "api": "set_hour_mode"
+    },
+    {
+      "page_id": 360,
+      "product": "timeframe",
+      "title": "Dial Type",
+      "url": "https://docin.divoom-gz.com/web/#/5/360",
+      "sha256": "ae6c1d2052e5f640e98fe5e86d5fd96a896d182451a5d2f79fe57943555dab00",
+      "kind": "api",
+      "api": "get_dial_list"
+    },
+    {
+      "page_id": 361,
+      "product": "timeframe",
+      "title": "Select faces Channel",
+      "url": "https://docin.divoom-gz.com/web/#/5/361",
+      "sha256": "ce14d3ad38f360ddb980b3a2668602e0fc42e1f45581378c5edb1a7ed24f6bf6",
+      "kind": "api",
+      "api": "select_clock"
+    },
+    {
+      "page_id": 374,
+      "product": "timeframe",
+      "title": "Enter custom display mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/374",
+      "sha256": "70abc45a2427c4ef2d70a6a45f1284e8012ece5fa711dda21a8b62fd9383cabf",
+      "kind": "api",
+      "api": "enter_custom_mode"
+    },
+    {
+      "page_id": 375,
+      "product": "timeframe",
+      "title": "Exit custom display mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/375",
+      "sha256": "a26e1d7b849e3ae3306da38fe98083c0a56b7d2e8b96627256dbfc6a5a56a319",
+      "kind": "api",
+      "api": "exit_custom_mode"
+    },
+    {
+      "page_id": 377,
+      "product": "timeframe",
+      "title": "Update Text Content",
+      "url": "https://docin.divoom-gz.com/web/#/5/377",
+      "sha256": "d2a28e254411680dd59a144eb8776e5aea3a9a7d01c8977e2fb8de9b95176f06",
+      "kind": "api",
+      "api": "update_display_items"
+    },
+    {
+      "page_id": 379,
+      "product": "timeframe",
+      "title": "Get font list",
+      "url": "https://docin.divoom-gz.com/web/#/5/379",
+      "sha256": "5f3c4d17fae2217fee8e90744725b688c9485b6179f8ead895bd9a83efe98754",
+      "kind": "api",
+      "api": "get_fonts"
+    },
+    {
+      "page_id": 381,
+      "product": "astrotoo",
+      "title": "command url",
+      "url": "https://docin.divoom-gz.com/web/#/5/381",
+      "sha256": "6f7db1fc1de2d8134b5fe654207702754c8e7b4745ffbd692cd452faba823d38",
+      "kind": "reference",
+      "api": null
+    },
+    {
+      "page_id": 382,
+      "product": "astrotoo",
+      "title": "Get hardware and firmware version",
+      "url": "https://docin.divoom-gz.com/web/#/5/382",
+      "sha256": "306bed278df6ed1eb5aeed7e7ef747fa6407d9ac04a1cd801feb71b976a348c9",
+      "kind": "api",
+      "api": "get_hardware_version"
+    },
+    {
+      "page_id": 383,
+      "product": "astrotoo",
+      "title": "Get LAN capabilities",
+      "url": "https://docin.divoom-gz.com/web/#/5/383",
+      "sha256": "26441128d2bc6a54be13dc329e26a17a29774bdba712c5659275104a57301d81",
+      "kind": "api",
+      "api": "get_lan_capabilities"
+    },
+    {
+      "page_id": 384,
+      "product": "astrotoo",
+      "title": "Get device ID",
+      "url": "https://docin.divoom-gz.com/web/#/5/384",
+      "sha256": "78f565e182615e8cddb0c2c494a8146ab2048232ea698b34d9ba9ecbd47c9de3",
+      "kind": "api",
+      "api": "get_device_id"
+    },
+    {
+      "page_id": 386,
+      "product": "astrotoo",
+      "title": "Get brightness",
+      "url": "https://docin.divoom-gz.com/web/#/5/386",
+      "sha256": "0233b9653f97afcaf545353219d455c627ca2d13bb47e99cfe1c89363a7c94ea",
+      "kind": "api",
+      "api": "get_brightness"
+    },
+    {
+      "page_id": 387,
+      "product": "astrotoo",
+      "title": "Get screen state",
+      "url": "https://docin.divoom-gz.com/web/#/5/387",
+      "sha256": "70aeb4e93984f653285c15767e7a5ef5ffbe8739f4f49b97558d468496dec560",
+      "kind": "api",
+      "api": "get_screen"
+    },
+    {
+      "page_id": 388,
+      "product": "astrotoo",
+      "title": "Get current clock",
+      "url": "https://docin.divoom-gz.com/web/#/5/388",
+      "sha256": "9a98c812849784d7ae8f69ec4b4a660c859294a5186e9f5825703a3efcc4988c",
+      "kind": "api",
+      "api": "get_current_clock"
+    },
+    {
+      "page_id": 389,
+      "product": "astrotoo",
+      "title": "Get storage status",
+      "url": "https://docin.divoom-gz.com/web/#/5/389",
+      "sha256": "b27ac0bdfcedf83ddbf9e827eac394fd183c511775610230714b59993821ff29",
+      "kind": "api",
+      "api": "get_storage_status"
+    },
+    {
+      "page_id": 390,
+      "product": "astrotoo",
+      "title": "Get cached weather",
+      "url": "https://docin.divoom-gz.com/web/#/5/390",
+      "sha256": "55f9a38ff4efcee8062df5fa2a668a3a873f25c4987cd78f2960092cf72b5ffb",
+      "kind": "api",
+      "api": "get_weather"
+    },
+    {
+      "page_id": 391,
+      "product": "astrotoo",
+      "title": "Get screen snapshot",
+      "url": "https://docin.divoom-gz.com/web/#/5/391",
+      "sha256": "5faded584971bd3d4b465073f6acd513f2bb80a0d8a73b7a93f13ea54cee5600",
+      "kind": "api",
+      "api": "get_screen_snapshot"
+    },
+    {
+      "page_id": 392,
+      "product": "astrotoo",
+      "title": "Set brightness",
+      "url": "https://docin.divoom-gz.com/web/#/5/392",
+      "sha256": "edf30caa317cc97b49200c0f6873012bf4a7bd899e446c060b3d2d1e9c21cca6",
+      "kind": "api",
+      "api": "set_brightness"
+    },
+    {
+      "page_id": 393,
+      "product": "astrotoo",
+      "title": "Screen switch",
+      "url": "https://docin.divoom-gz.com/web/#/5/393",
+      "sha256": "886477d0b11870717b862402d667181d9a85c4669503a23de3dff8ed15e9f4e7",
+      "kind": "api",
+      "api": "set_screen"
+    },
+    {
+      "page_id": 398,
+      "product": "astrotoo",
+      "title": "Set hour mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/398",
+      "sha256": "f876a6d3bb2d694a395d007c483a987465e6dd95bc8533bf2af3e7a4f208656c",
+      "kind": "api",
+      "api": "set_hour_mode"
+    },
+    {
+      "page_id": 399,
+      "product": "astrotoo",
+      "title": "Set temperature mode",
+      "url": "https://docin.divoom-gz.com/web/#/5/399",
+      "sha256": "6fcbec02df42541890f53dd9fe59cc1a10433f248af2ca51caefd0d8b254a17e",
+      "kind": "api",
+      "api": "set_temperature_mode"
+    },
+    {
+      "page_id": 401,
+      "product": "astrotoo",
+      "title": "Get local album list",
+      "url": "https://docin.divoom-gz.com/web/#/5/401",
+      "sha256": "11b6d469eed5a55adf4c72939743b17ec0a93af05a63061ba8857dc2748723cd",
+      "kind": "api",
+      "api": "get_local_albums"
+    },
+    {
+      "page_id": 402,
+      "product": "astrotoo",
+      "title": "Get local photo list",
+      "url": "https://docin.divoom-gz.com/web/#/5/402",
+      "sha256": "1419aed492673caf4b0bc168b3856b510316cd0ba7a22d11455720564262458c",
+      "kind": "api",
+      "api": "get_local_photos"
+    },
+    {
+      "page_id": 406,
+      "product": "astrotoo",
+      "title": "Set album cover",
+      "url": "https://docin.divoom-gz.com/web/#/5/406",
+      "sha256": "5febba0d2c32ae8aba2f1841eb924e41046db96763293f249b14c23c64533b33",
+      "kind": "api",
+      "api": "set_album_cover"
+    },
+    {
+      "page_id": 407,
+      "product": "astrotoo",
+      "title": "Add existing photos to album",
+      "url": "https://docin.divoom-gz.com/web/#/5/407",
+      "sha256": "4b01809f51d724fa1c78af4f79f24e263a884dad7af0b1eccb36441557b183a5",
+      "kind": "api",
+      "api": "add_photos_to_album"
+    },
+    {
+      "page_id": 408,
+      "product": "astrotoo",
+      "title": "Remove photos from album",
+      "url": "https://docin.divoom-gz.com/web/#/5/408",
+      "sha256": "4576ca1ce008a5d5b761afabb9b9ff8b4439a94f5e64f0c7453fdaa24375d3f3",
+      "kind": "api",
+      "api": "remove_photos_from_album"
+    },
+    {
+      "page_id": 409,
+      "product": "astrotoo",
+      "title": "Delete local photos",
+      "url": "https://docin.divoom-gz.com/web/#/5/409",
+      "sha256": "2c12c07c8f5a105170d0a9c02de2f50776a9cdcc168d778b20a37419db5a0a8e",
+      "kind": "api",
+      "api": "delete_photos"
+    },
+    {
+      "page_id": 412,
+      "product": "astrotoo",
+      "title": "Set album playback configuration",
+      "url": "https://docin.divoom-gz.com/web/#/5/412",
+      "sha256": "baa6849d2bee27c9305fe8e899c65902ec7499013d54ca6d19e61d70b9139144",
+      "kind": "api",
+      "api": "set_album_config"
+    },
+    {
+      "page_id": 413,
+      "product": "astrotoo",
+      "title": "Upload local photo or video",
+      "url": "https://docin.divoom-gz.com/web/#/5/413",
+      "sha256": "0c1bef530e1a9a5240853c2ab7028bf5bb6c0a12861a51d2bc7dcb817a0fc49e",
+      "kind": "api",
+      "api": "upload_media"
+    },
+    {
+      "page_id": 414,
+      "product": "astrotoo",
+      "title": "Download local media",
+      "url": "https://docin.divoom-gz.com/web/#/5/414",
+      "sha256": "500c44611e3bf480f4ddf7531509878bf7b686b9f8c611bf681639f4895aa9fa",
+      "kind": "api",
+      "api": "download_media"
+    },
+    {
+      "page_id": 415,
+      "product": "astrotoo",
+      "title": "Get local clock configuration",
+      "url": "https://docin.divoom-gz.com/web/#/5/415",
+      "sha256": "4ec43f311c992d3faeadd47e7fbfe4714c1ae1a1102849d16425379d3cef6fb6",
+      "kind": "api",
+      "api": "get_local_clock"
+    },
+    {
+      "page_id": 416,
+      "product": "astrotoo",
+      "title": "Patch local clock configuration",
+      "url": "https://docin.divoom-gz.com/web/#/5/416",
+      "sha256": "10665992718699b1ce4441d23afc16b46b9dfc7c08c11219bad092ddf898ce86",
+      "kind": "api",
+      "api": "patch_local_clock"
+    },
+    {
+      "page_id": 417,
+      "product": "astrotoo",
+      "title": "Get local font list",
+      "url": "https://docin.divoom-gz.com/web/#/5/417",
+      "sha256": "ea5b13feb57ba935e54ed532fcac2b975e6710092bb70224b036c3a28d1d288d",
+      "kind": "api",
+      "api": "get_local_fonts"
+    },
+    {
+      "page_id": 418,
+      "product": "astrotoo",
+      "title": "Upload local clock asset",
+      "url": "https://docin.divoom-gz.com/web/#/5/418",
+      "sha256": "9b4f2bad1f8dea986aee0be29414ace94b4f952828d834fe19fcfa522a466e3d",
+      "kind": "api",
+      "api": "upload_clock_asset"
+    },
+    {
+      "page_id": 419,
+      "product": "astrotoo",
+      "title": "Create local clock",
+      "url": "https://docin.divoom-gz.com/web/#/5/419",
+      "sha256": "8f19d1f125bb83cac9e744e0f650fb8ddd146a00df685b90027877601a808e77",
+      "kind": "api",
+      "api": "create_local_clock"
+    },
+    {
+      "page_id": 420,
+      "product": "astrotoo",
+      "title": "Patch clock with background image",
+      "url": "https://docin.divoom-gz.com/web/#/5/420",
+      "sha256": "a76dcab4936f2e8bdf4da903034891824ff5834f07e540c1b36f83977fb99515",
+      "kind": "api",
+      "api": "patch_clock_background"
+    },
+    {
+      "page_id": 421,
+      "product": "astrotoo",
+      "title": "Replace clock background",
+      "url": "https://docin.divoom-gz.com/web/#/5/421",
+      "sha256": "500f87a66ed775df967507d5773ffa99cbed01dadb9b744b4897bc6cd4743e5e",
+      "kind": "api",
+      "api": "replace_clock_background"
+    },
+    {
+      "page_id": 430,
+      "product": "astrotoo",
+      "title": "Watchface editor and MCP tools",
+      "url": "https://docin.divoom-gz.com/web/#/5/430",
+      "sha256": "b5cc33d9ca8eaa96627f15f2f652d05f8fcefba4bab09f3676d73219dbf2c42b",
+      "kind": "reference",
+      "api": null
+    },
+    {
+      "page_id": 422,
+      "product": "astrotoo",
+      "title": "Get countdown tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/422",
+      "sha256": "c417ad69cc9f718388313beadaeae31da485c73c928ead9b5aaba3878e5f4f30",
+      "kind": "api",
+      "api": "get_countdown"
+    },
+    {
+      "page_id": 423,
+      "product": "astrotoo",
+      "title": "Set countdown tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/423",
+      "sha256": "2217a8c22218333590048b713dca9f8bc84983e576a09ae0797f77f3a21ae9af",
+      "kind": "api",
+      "api": "set_countdown"
+    },
+    {
+      "page_id": 424,
+      "product": "astrotoo",
+      "title": "Get stopwatch tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/424",
+      "sha256": "9f6e9539116cc08a8a09aa5d10fbfc8162c36a608cdad41655bc0814e9232fe2",
+      "kind": "api",
+      "api": "get_stopwatch"
+    },
+    {
+      "page_id": 425,
+      "product": "astrotoo",
+      "title": "Set stopwatch tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/425",
+      "sha256": "924363fb170aec50ab3b3d1dc5e3377fe14da58e0a719262559ef0b4ec1590ef",
+      "kind": "api",
+      "api": "set_stopwatch"
+    },
+    {
+      "page_id": 426,
+      "product": "astrotoo",
+      "title": "Get scoreboard tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/426",
+      "sha256": "233df0e50d9d650e40a1d54339b00305e5c1931721def2dc8d1c968d7c72335a",
+      "kind": "api",
+      "api": "get_scoreboard"
+    },
+    {
+      "page_id": 427,
+      "product": "astrotoo",
+      "title": "Set scoreboard tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/427",
+      "sha256": "973a26cba335d1e96fc1b42ffa3a4dca4efa48e4aa8141ec35f0cfed4ec06dbd",
+      "kind": "api",
+      "api": "set_scoreboard"
+    },
+    {
+      "page_id": 428,
+      "product": "astrotoo",
+      "title": "Get noise tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/428",
+      "sha256": "b000bcbd227388d20a78a2ce8a91523c247b11e84362022dcc3994248d270bef",
+      "kind": "api",
+      "api": "get_noise_tool"
+    },
+    {
+      "page_id": 429,
+      "product": "astrotoo",
+      "title": "Set noise tool",
+      "url": "https://docin.divoom-gz.com/web/#/5/429",
+      "sha256": "34e7db7b23d3906974245153670bf107f504cd69928437b603761bdf6b3ad4da",
+      "kind": "api",
+      "api": "set_noise_tool"
+    },
+    {
+      "page_id": 24,
+      "product": "common",
+      "title": "command format",
+      "url": "https://docin.divoom-gz.com/web/#/5/24",
+      "sha256": "27a909e1509bdb5854ca3d4421e96ecd1f78bf476c4d85961b97b101bcd314e0",
+      "kind": "reference",
+      "api": null
+    },
+    {
+      "page_id": 25,
+      "product": "common",
+      "title": "Find device",
+      "url": "https://docin.divoom-gz.com/web/#/5/25",
+      "sha256": "cde5ec2d645b5a12cb5a63c6e30dfaea2b81c3551d8ced49835de2c5c3f8c4c5",
+      "kind": "reference",
+      "api": "discover_devices"
+    },
+    {
+      "page_id": 145,
+      "product": "common",
+      "title": "DIY Net Data Clock",
+      "url": "https://docin.divoom-gz.com/web/#/5/145",
+      "sha256": "6efdcab27d2de139d7199e7b8c97e4dbcc3b1b480ee36f3af60073fc8cd48f80",
+      "kind": "reference",
+      "api": null
+    }
+  ]
+}

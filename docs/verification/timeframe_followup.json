@@ -1,0 +1,140 @@
+{
+  "date": "2026-10-27T15:41:21.497896+08:00",
+  "scope": "read-only",
+  "discovery_counts": {
+    "90": 3,
+    "92": 3,
+    "400": 1,
+    "510": 3,
+    "511": 3,
+    "700": 2,
+    "530": 12
+  },
+  "devices": [
+    {
+      "hardware": 510,
+      "product": "timeframe",
+      "sample": 1,
+      "checks": [
+        {
+          "api": "probe_hardware",
+          "result": "unavailable",
+          "error": "NetworkError"
+        },
+        {
+          "api": "get_fonts",
+          "result": "pass",
+          "response_fields": [
+            "DeviceId",
+            "FontList",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        },
+        {
+          "api": "get_dial_list",
+          "result": "pass",
+          "response_fields": [
+            "ClockList",
+            "DeviceId",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        }
+      ]
+    },
+    {
+      "hardware": 510,
+      "product": "timeframe",
+      "sample": 2,
+      "checks": [
+        {
+          "api": "probe_hardware",
+          "result": "pass",
+          "reported_hardware": 510,
+          "firmware": 510175
+        },
+        {
+          "api": "get_fonts",
+          "result": "unavailable",
+          "error": "NetworkError",
+          "code": null,
+          "http_status": null
+        },
+        {
+          "api": "get_dial_list",
+          "result": "unavailable",
+          "error": "NetworkError",
+          "code": null,
+          "http_status": null
+        }
+      ]
+    },
+    {
+      "hardware": 511,
+      "product": "timeframe",
+      "sample": 1,
+      "checks": [
+        {
+          "api": "probe_hardware",
+          "result": "pass",
+          "reported_hardware": 511,
+          "firmware": 511175
+        },
+        {
+          "api": "get_fonts",
+          "result": "pass",
+          "response_fields": [
+            "DeviceId",
+            "FontList",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        },
+        {
+          "api": "get_dial_list",
+          "result": "pass",
+          "response_fields": [
+            "ClockList",
+            "DeviceId",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        }
+      ]
+    },
+    {
+      "hardware": 511,
+      "product": "timeframe",
+      "sample": 2,
+      "checks": [
+        {
+          "api": "probe_hardware",
+          "result": "pass",
+          "reported_hardware": 511,
+          "firmware": 511175
+        },
+        {
+          "api": "get_fonts",
+          "result": "pass",
+          "response_fields": [
+            "DeviceId",
+            "FontList",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        },
+        {
+          "api": "get_dial_list",
+          "result": "pass",
+          "response_fields": [
+            "ClockList",
+            "DeviceId",
+            "ReturnCode",
+            "ReturnMessage"
+          ]
+        }
+      ]
+    }
+  ]
+}

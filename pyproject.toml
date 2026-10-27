@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "divoom-wifi"
+version = "0.1.0"
+description = "Hardware-aware Python and CLI APIs for Divoom WiFi devices"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Divoom Developers"}]
+dependencies = ["requests>=2.31,<3"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+Homepage = "https://github.com/DivoomDevelop/divoom-wifi-python"
+Documentation = "https://github.com/DivoomDevelop/divoom-wifi-python#readme"
+Issues = "https://github.com/DivoomDevelop/divoom-wifi-python/issues"
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "build>=1", "twine>=5", "ruff>=0.9"]
+
+[project.scripts]
+divoom-wifi = "divoom_wifi.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+divoom_wifi = ["data/*.json", "py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

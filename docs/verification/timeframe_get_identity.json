@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-27T15:45:28.473934+08:00",
+  "scope": "GET read-only identity query",
+  "checks": [
+    {
+      "hardware": 510,
+      "method": "GET",
+      "command": "Device/GetHardwareVersion",
+      "result": "unavailable",
+      "error": "NetworkError"
+    },
+    {
+      "hardware": 510,
+      "method": "GET",
+      "command": "Device/GetHardwareVersion",
+      "result": "pass",
+      "reported_hardware": 510,
+      "firmware": 510175
+    },
+    {
+      "hardware": 511,
+      "method": "GET",
+      "command": "Device/GetHardwareVersion",
+      "result": "pass",
+      "reported_hardware": 511,
+      "firmware": 511175
+    },
+    {
+      "hardware": 511,
+      "method": "GET",
+      "command": "Device/GetHardwareVersion",
+      "result": "pass",
+      "reported_hardware": 511,
+      "firmware": 511175
+    }
+  ]
+}
