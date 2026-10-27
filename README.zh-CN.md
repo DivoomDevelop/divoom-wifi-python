@@ -32,8 +32,9 @@ divoom-wifi
 python -m pip install "git+https://github.com/DivoomDevelop/divoom-wifi-python.git"
 ```
 
-无参数启动后，选择设备，再选择对应 API、查看参数并执行。TimeGate 需要的 `LocalToken`
-取自设备设置，命令行会隐藏输入；也可设置环境变量 `DIVOOM_LOCAL_TOKEN`，不会自动保存。
+无参数启动后，选择设备，再选择对应 API、查看参数并执行。TimeGate 硬件 **400** 需要设备设置中的
+`LocalToken`，命令行会隐藏输入；硬件 **402** 无需填写。需要时也可设置环境变量
+`DIVOOM_LOCAL_TOKEN`，不会自动保存。
 
 ```python
 from divoom_wifi import discover_devices, connect
@@ -122,6 +123,16 @@ python -m twine check dist/*
 ```
 
 ## 反馈与贡献
+
+四类产品的最新直连测试见 [局域网验证记录](docs/LAN_CHECKS.md)。本地可执行：
+
+```console
+python tools/check_lan.py --output .venv/lan-checks/report.json
+```
+
+只有发现步骤访问云端，设备查询均直连局域网。没有业务字段的成功确认标为 `ack_only`；
+部分只读探测并不属于该产品已公布的 Python 方法目录，会标为 `protocol_probe`。
+报告含本地 IP，应保留在本机；已有报告不会覆盖。
 
 问题和功能建议请提交至 [GitHub Issues](https://github.com/DivoomDevelop/divoom-wifi-python/issues)，
 说明 SDK 版本、产品、硬件/固件版本、所用接口和最小复现代码。

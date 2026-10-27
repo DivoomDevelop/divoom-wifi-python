@@ -198,6 +198,18 @@ def test_conditional_clock_target_and_channel_type(make_client, server):
         gate.select_channel_type(channel_type=1)
 
 
+def test_timegate_402_can_send_without_token(make_client, server, monkeypatch):
+    monkeypatch.delenv("DIVOOM_LOCAL_TOKEN", raising=False)
+    gate = make_client(402, local_token=None)
+    assert not gate.profile.local_token_required
+    gate.get_settings()
+    assert server.records[-1]["path"] == "/divoom_api"
+    assert server.records[-1]["payload"] == {"Command": "Channel/GetAllConf"}
+    gate.set_brightness(brightness=40)
+    assert server.records[-1]["payload"] == {"Command": "Channel/SetBrightness", "Brightness": 40}
+    assert make_client(400).profile.local_token_required
+
+
 def test_timeframe_fonts_inject_documentation_omission(make_client, server):
     frame = make_client(510)
     frame.get_fonts()

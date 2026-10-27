@@ -99,11 +99,12 @@ class BaseDevice:
         if remaining:
             raise ValidationError(f"Unknown parameters: {', '.join(sorted(remaining))}", api_name=spec.name)
         if spec.token_required:
-            if self._token is None:
-                raise TokenRequiredError("TimeGate requires LocalToken from device settings; set DIVOOM_LOCAL_TOKEN "
-                                         "or pass local_token to connect()", api_name=spec.name)
-            self.set_local_token(self._token)
-            payload["LocalToken"] = self._token
+            if self._token is None and self.profile.local_token_required:
+                raise TokenRequiredError("TimeGate hardware 400 requires LocalToken from device settings; "
+                                         "set DIVOOM_LOCAL_TOKEN or pass local_token to connect()", api_name=spec.name)
+            if self._token is not None:
+                self.set_local_token(self._token)
+                payload["LocalToken"] = self._token
         self._validate_payload(spec, payload)
         return payload
 

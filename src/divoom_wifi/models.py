@@ -12,10 +12,11 @@ class ProductProfile:
     port: int
     path: str
     method: str
+    local_token_required: bool = False
 
 
 PROFILES = {
-    hw: ProductProfile(product, hw, port, path, method)
+    hw: ProductProfile(product, hw, port, path, method, local_token_required=(hw == 400))
     for product, hardware, port, path, method in (
         ("pixoo64", (90, 92), 80, "/post", "POST"),
         ("pixoo64", (96,), 9000, "/divoom_api", "POST"),

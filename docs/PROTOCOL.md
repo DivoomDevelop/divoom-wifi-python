@@ -16,6 +16,13 @@ page's documented URL; notably TIMEFRAME's dial list is a cloud GET body. LAN en
 are disabled to keep local tokens on the direct connection. Cloud requests can use normal proxy
 settings. Redirects are rejected and requests are not retried automatically.
 
+TimeGate token requirements depend on hardware: 400 requires LocalToken, while 402 accepts LAN
+requests without it (live reads verified on 2026-10-27). A supplied token is still attached to documented
+TimeGate operations on either profile. The registry's token flag records the source-document field;
+`ProductProfile.local_token_required` determines whether the SDK requires it for the selected hardware.
+The CLI follows that hardware profile. See [direct LAN checks](LAN_CHECKS.md) for acknowledgement-only
+legacy query responses on hardware 402; a zero status does not prove configuration data was returned.
+
 Source differences are intentionally recorded:
 
 - Legacy reboot tables use lowercase `command`; generated requests use canonical `Command` from

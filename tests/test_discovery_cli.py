@@ -119,6 +119,15 @@ def test_cli_empty_discovery_and_selection_by_id(server, capsys):
     assert server.records[-1]["payload"]["Command"] == "Sys/GetBrightness"
 
 
+def test_cli_timegate_402_does_not_prompt_for_optional_token(server, monkeypatch, capsys):
+    monkeypatch.delenv("DIVOOM_LOCAL_TOKEN", raising=False)
+    monkeypatch.setattr(sys.stdin, "isatty", lambda: False)
+    assert cli.main(["call", "get_settings", "--ip", "127.0.0.1", "--hardware", "402",
+                     "--base-url", server.url, "--json"]) == 0
+    assert json.loads(capsys.readouterr().out)["ReturnCode"] == 0
+    assert server.records[-1]["payload"] == {"Command": "Channel/GetAllConf"}
+
+
 def test_full_interactive_selection_then_call_and_quit(server, monkeypatch, capsys):
     monkeypatch.setattr(sys.stdin, "isatty", lambda: True)
     monkeypatch.delenv("DIVOOM_LOCAL_TOKEN", raising=False)

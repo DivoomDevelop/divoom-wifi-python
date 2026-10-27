@@ -35,7 +35,7 @@ Or install directly from GitHub (requires Git):
 python -m pip install "git+https://github.com/DivoomDevelop/divoom-wifi-python.git"
 ```
 
-For a downloaded wheel: `python -m pip install divoom_wifi-0.1.0-py3-none-any.whl`.
+For a downloaded wheel: `python -m pip install divoom_wifi-0.1.1-py3-none-any.whl`.
 The only runtime dependency is `requests`. Windows, macOS and Linux use the same Python API.
 No documentation website access is needed at runtime.
 
@@ -79,8 +79,9 @@ with connect("192.168.1.60", hardware=400, local_token=123456) as gate:
     gate.select_clock(clock_id=100, lcd_index=0, lcd_independence=0)
 ```
 
-The shown IPs, token and IDs are placeholders. TimeGate's `LocalToken` comes from device settings;
-alternatively set `DIVOOM_LOCAL_TOKEN`. Tokens are kept in memory, injected only into documented
+The shown IPs, token and IDs are placeholders. TimeGate hardware **400** requires a `LocalToken` from
+device settings; hardware **402** accepts LAN requests without one. Alternatively set `DIVOOM_LOCAL_TOKEN`
+when needed. Tokens are kept in memory, injected only into documented
 TimeGate operations, and are not saved. Cloud APIs automatically use the discovered device ID/MAC.
 For a direct-IP cloud call, construct a `DeviceInfo` with that metadata, or supply `device_id` /
 `device_mac` to the corresponding method.
@@ -106,8 +107,9 @@ require an explicit hardware ID.
 
 ## Command line
 
-Run `divoom-wifi` with no arguments for the device/API selection menu. TimeGate tokens are requested
-with hidden input when a terminal is available. Noninteractive calls use `DIVOOM_LOCAL_TOKEN`.
+Run `divoom-wifi` with no arguments for the device/API selection menu. TimeGate hardware 400 tokens
+are requested with hidden input when a terminal is available. Hardware 402 does not prompt for an
+optional token. Noninteractive calls that need a token use `DIVOOM_LOCAL_TOKEN`.
 
 ```console
 divoom-wifi discover
@@ -200,6 +202,18 @@ The package excludes PIXOO16, Bluetooth protocols, undocumented firmware command
 watchface editor. Installation instructions above use this GitHub repository or a locally built wheel.
 
 ## Support and contributing
+
+See [direct LAN verification](docs/LAN_CHECKS.md) for the four-product retest and the hardware 400/402
+token difference. To run read-only checks against discovered devices locally:
+
+```console
+python tools/check_lan.py --output .venv/lan-checks/report.json
+```
+
+Only discovery uses the cloud; device checks connect directly to LAN endpoints. Replies without
+expected business fields are reported as `ack_only`. Some read-only probes are outside a product's
+published Python method catalog and are labeled `protocol_probe`. Reports contain local IPs and
+should be kept local. Existing report files are never overwritten.
 
 Report bugs or propose features in [GitHub Issues](https://github.com/DivoomDevelop/divoom-wifi-python/issues).
 Include the SDK version, product, hardware/firmware version, the API involved and a minimal example.
